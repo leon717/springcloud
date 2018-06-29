@@ -65,5 +65,6 @@
 		<module>producer</module>
 		<module>consumer</module>
 		<module>consumer-hystrix-dashboard</module>
+		<module>hystrix-turbine</module>
 	</modules>
 </project>

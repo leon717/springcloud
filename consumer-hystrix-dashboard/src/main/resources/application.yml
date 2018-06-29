@@ -1,8 +1,55 @@
 spring:
+  profiles:
+    active: localhost
+---
+spring:
   application:
     name: consumer-hystrix-dashboard
+  profiles: localhost
 server:
   port: 8084
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+feign:
+  hystrix:
+    enabled: true
+---
+spring:
+  application:
+    name: node1
+  profiles: node1
+server:
+  port: 9084
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+feign:
+  hystrix:
+    enabled: true
+---
+spring:
+  application:
+    name: node2
+  profiles: node2
+server:
+  port: 9085
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+feign:
+  hystrix:
+    enabled: true
+---
+spring:
+  application:
+    name: node3
+  profiles: node3
+server:
+  port: 9086
 eureka:
   client:
     serviceUrl:

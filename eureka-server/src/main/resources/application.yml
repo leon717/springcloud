@@ -20,7 +20,7 @@ spring:
     name: eureka-server
   profiles: peer1
 server:
-  port: 8761
+  port: 9761
 eureka:
   instance:
     hostname: peer1
@@ -33,7 +33,7 @@ spring:
     name: eureka-server
   profiles: peer2
 server:
-  port: 8762
+  port: 9762
 eureka:
   instance:
     hostname: peer2
@@ -46,7 +46,7 @@ spring:
     name: eureka-server
   profiles: peer3
 server:
-  port: 8763
+  port: 9763
 eureka:
   instance:
     hostname: peer3
