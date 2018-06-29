@@ -64,5 +64,6 @@
 		<module>eureka-client</module>
 		<module>producer</module>
 		<module>consumer</module>
+		<module>consumer-hystrix-dashboard</module>
 	</modules>
 </project>
