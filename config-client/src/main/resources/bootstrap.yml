@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      name: leo-config
+      profile: dev
+      uri: http://localhost:8086/
+      label: master
+server:
+  port: 8087
