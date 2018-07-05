@@ -16,3 +16,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+#springboot 1.5.X 以上默认开通了安全认证
+management:
+  security:
+    enabled: false
