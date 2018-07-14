@@ -6,8 +6,8 @@
 	<description>eureka-client</description>
 
 	<parent>
-	  <groupId>com.leo</groupId>
-	  <artifactId>springcloud</artifactId>
+	  <groupId>com.leo.springcloud</groupId>
+	  <artifactId>base</artifactId>
 	  <version>0.0.1-SNAPSHOT</version>
 	</parent>
 
