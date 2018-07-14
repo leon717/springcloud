@@ -8,14 +8,15 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
+#路由配置：有2种方式
 #这里的配置表示，访问/search/** 直接重定向到http://www.baidu.com/**
 #访问http://localhost:8088/producer/hello?name=123，重定向http://localhost:8082/hello?name=123
-zuul:
-  routes:
+#zuul:
+#  routes:
 #1.url写死方式
-    baidu:
-      path: /search/**
-      url: http://www.baidu.com/
+#    baidu:
+#      path: /search/**
+#      url: http://www.baidu.com/
 #    hello:
 #      path: /producer/**
 #      url: http://localhost:8082/
@@ -23,3 +24,18 @@ zuul:
 #    api-a:
 #      path: /producer/**
 #      serviceId: producer
+
+#是否开启重试功能（默认1次）
+#zuul:
+#  retryable: true
+#ribbon:
+#对当前服务的重试次数
+#  MaxAutoRetries: 2
+#切换相同Server的次数
+#  MaxAutoRetriesNextServer: 0
+
+#禁用的filter
+#zuul:
+#  FormBodyWrapperFilter:
+#      pre:
+#          disable: true
