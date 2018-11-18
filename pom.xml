@@ -69,5 +69,7 @@
 		<module>config-server</module>
 		<module>config-client</module>
 		<module>gateway</module>
+		<module>admin</module>
+		<module>admin-client</module>
 	</modules>
 </project>
