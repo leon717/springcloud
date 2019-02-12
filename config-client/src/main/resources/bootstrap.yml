@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      name: leo-config
+      profile: dev
+#      uri: http://localhost:8086/   #除去直接指向配置中心地址的配置
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+#开启消息跟踪
+    bus:
+      trace:
+        enabled: true
+#rabbitmq
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+server:
+  port: 8087
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+#springboot 1.5.X 以上默认开通了安全认证
+#刷新时，关闭安全验证
+management:
+  security:
+    enabled: false

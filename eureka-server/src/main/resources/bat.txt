@@ -1,0 +1,4 @@
+#高可用注册中心执行脚本
+java -jar eureka-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=peer1
+java -jar eureka-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=peer2
+java -jar eureka-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=peer3

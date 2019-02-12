@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: admin-client
+#  boot:
+#    admin:
+#      url: http://localhost:8090
+server:
+  port: 8091
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+# 关闭安全验证
+management:
+  security:
+    enabled: false
+
+# 允许停止服务
+#endpoints:
+#  shutdown:
+#    enabled: true
+
+info:
+  name: admin-client
+  version: 1.0.0
