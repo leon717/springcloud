@@ -15,3 +15,9 @@ eureka:
 feign:
   hystrix:
     enabled: true
+
+eureka-client:  #指定服务配置，不指定为全局配置，默认GET请求retry一次
+  ribbon:
+    OkToRetryOnAllOperations: true  #false则不支持post方式
+    MaxAutoRetriesNextServer: 3     #切换实例次数
+    MaxAutoRetries: 0               #同一个实例尝试次数，总次数为2者乘积

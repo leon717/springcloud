@@ -1,8 +1,12 @@
 package com.leo.controller;
 
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -13,6 +17,11 @@ public class HelloController {
 	@GetMapping("hello")
 	public String hello(String name){
 		return "hello "+name+"!";
+	}
+	
+	@PostMapping("post")
+	public Object post(@RequestBody Map<String, Object> paramMap) {
+		return paramMap;
 	}
 	
 	//only for zuul retry test
@@ -26,4 +35,5 @@ public class HelloController {
 	    }
 	    return "hello "+name+"，this is two messge";
 	}
+
 }

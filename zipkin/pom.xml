@@ -8,8 +8,8 @@
 	<description>zipkin</description>
 
 	<parent>
-	  <groupId>com.leo.springcloud</groupId>
-	  <artifactId>base</artifactId>
+	  <groupId>com.leo.cloud</groupId>
+	  <artifactId>parent</artifactId>
 	  <version>0.0.1-SNAPSHOT</version>
 	</parent>
 
