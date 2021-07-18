@@ -6,15 +6,15 @@
 	<description>eureka-client</description>
 
 	<parent>
-	  <groupId>com.leo.cloud</groupId>
-	  <artifactId>parent</artifactId>
-	  <version>0.0.1-SNAPSHOT</version>
+		<groupId>com.leo.cloud</groupId>
+		<artifactId>parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 	</dependencies>
 	
