@@ -1,29 +1,31 @@
 package com.leo.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.leo.client.OtherClient;
+import com.leo.client.HostClient;
 import com.leo.client.ProducerClient;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ConsumerController {
 
     @Autowired
-    ProducerClient producer;
-    
+    ProducerClient producerClient;
+
     @Autowired
-    OtherClient otherClient;
-    
-    @GetMapping("/hello/{name}")
-    public String index(@PathVariable("name") String name) {
-        return producer.hello(name);
+    HostClient hostClient;
+
+    @Value("${spring.application.name}")
+    String appName;
+
+    @GetMapping("/hello")
+    public String hello() {
+        return producerClient.hello(appName);
     }
-    
-    @GetMapping("/other")
-    public String other() {
-		return otherClient.info();
+
+    @GetMapping("/host")
+    public String host() {
+        return hostClient.get();
     }
 }
