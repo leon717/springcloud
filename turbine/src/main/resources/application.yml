@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: turbine
+server:
+  port: 8085
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+turbine:
+  appConfig: consumer
+#指定集群
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
+
+hystrix:
+  dashboard:
+    proxyStreamAllowList: "*"
