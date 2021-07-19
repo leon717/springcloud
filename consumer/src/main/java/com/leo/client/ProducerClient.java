@@ -10,7 +10,4 @@ public interface ProducerClient {
 
     @GetMapping(value = "/hello")
     String hello(@RequestParam(value = "name") String name);
-
-    @GetMapping(value = "/hello")
-    String hello2(@RequestParam(value = "name") String name);
 }

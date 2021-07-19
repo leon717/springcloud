@@ -24,11 +24,6 @@ public class ConsumerController {
         return producerClient.hello(appName);
     }
 
-    @GetMapping("/hello2")
-    public String hello2() {
-        return producerClient.hello2(appName);
-    }
-
     @GetMapping("/host")
     public String host() {
         return hostClient.get();
