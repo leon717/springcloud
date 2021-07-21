@@ -3,13 +3,13 @@ spring:
     name: config-client
   cloud:
     config:
-      name: leo-config
-      profile: dev
+      name: config
+      profile: local
 #      uri: http://localhost:8086/   #除去直接指向配置中心地址的配置
-      label: master
+#      label: master
       discovery:
         enabled: true
-        service-id: config-server
+        serviceId: config-server
 #开启消息跟踪
     bus:
       trace:

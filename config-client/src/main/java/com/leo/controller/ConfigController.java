@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigController {
 
-    @Value("${leo.hello}")
-    private String config;
+    @Value("${test}")
+    private String test;
     
-	@GetMapping("config")
+	@GetMapping("/config")
 	public String hello(){
-		return config;
+		return test;
 	}
 }
