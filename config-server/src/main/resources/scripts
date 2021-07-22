@@ -4,9 +4,3 @@ curl -X GET http://localhost:8086/{application}-{profile}.yml
 curl -X GET http://localhost:8086/{label}/{application}-{profile}.yml
 curl -X GET http://localhost:8086/{application}-{profile}.properties
 curl -X GET http://localhost:8086/{label}/{application}-{profile}.properties
-
-#refresh properties
-curl -X POST http://localhost:8086/bus/refresh										refresh所有注册的服务
-curl -X POST http://localhost:8086/bus/refresh?destination=application-name			refresh指定所有服务
-curl -X POST http://localhost:8086/bus/refresh?destination=application-name:port	refresh指定服务
-curl -X GET http://localhost:8086/trace		跟踪总线事件
