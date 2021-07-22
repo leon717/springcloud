@@ -76,6 +76,5 @@
 		<module>zuul</module>
 		<!--		<module>admin</module>-->
 <!--		<module>admin-client</module>-->
-<!--		<module>zipkin</module>-->
 	</modules>
 </project>
